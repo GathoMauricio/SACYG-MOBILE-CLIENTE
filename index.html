@@ -4,41 +4,42 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
         <meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="css/font.css">
-        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+
+		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/alert.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/codigo.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/alert.css">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
+        <link rel="stylesheet" type="text/css" href="css/font.css">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        
         <script type="text/javascript">
 
         function onBodyLoad()
         {       
-           
+           if(window.localStorage.getItem('id_usuario')!= null)
+           {
+                alert("ID de Login = "+window.localStorage.getItem("id_usuario"));
+                loadMain();
+           }else
+           {
+            loadInicio();
+           }
         }
 
         function onDeviceReady()
         {
             
         }
-
+        function alerta(texto)
+        {
+            
+        }
         </script>
     </head>
     <body onload="onBodyLoad()"> 
-    <center>
-    <h1 class="titulo">S A C Y G <br>mobile</h1>
-    <h1 class="welcome">Bienvenid@</h1>
-    <input type="email" class="login" placeholder="E-MAIL">
-    <br><br>
-    <input type="password" class="login" placeholder="CONTRASEÑA">
-    <br><br>
-    <button class="login">INICIAR SESION</button> 
-    <br><br>
-    <a href="#" class="opciones">Olvide mi contraseña</a>
-    <br><br>
-    <a href="#" class="opciones">Quiero registrarme</a>
-    </center>
-    <br><br><br><br><br><br><br><br><br><br>
+    
     </body>
 </html>
 

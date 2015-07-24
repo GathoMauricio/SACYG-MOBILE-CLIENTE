@@ -13,13 +13,19 @@ background:url(../img/rest12.jpg) no-repeat center center fixed;
 	font-size: 2.5em;
 	text-shadow: #aaa 2px 2px 2px;
 }
-.login{
+.input{
 	width:80%;
 	height:30px;
 	text-align:center;
 	background-color:transparent;
 	border-radius:10px;
 	color:#FFF;
+	
+}
+button{
+	border: solid white 1px;
+	font-family: "Lobster", "Times", serif;
+	font-size: 1em;
 }
 .welcome{
 	color:#FFF;
