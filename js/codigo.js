@@ -27,7 +27,6 @@ function recuperarContrasena()
 	if(validarEmail(email))
 	{
 		$.post("http://sacygrestaurantes.com/control/recuperacion.php",{email:email},function(data){
-			swal(data);
 			alert(data);
 		});
 	}else
@@ -50,7 +49,7 @@ function validaCliente()
 			if(data >= 1)
 			{
 				window.localStorage.setItem("id_usuario",data);
-				loadMain();
+				location.reload(true);
 			}else{
 				alert("Los datos son incorrectos o tal vez has olvidado activar tu cuenta!!!","error");
 			}
@@ -60,4 +59,8 @@ function cerrarSesion()
 {
 	window.localStorage.clear();
 	loadInicio();
+}
+function loadConfiguraciones()
+{
+	$("#contenedor").html('<center><a href="#" onclick="cerrarSesion();" class="opciones">CerrarSesion</a></center>');
 }

@@ -7,19 +7,20 @@
 
 		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/codigo.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
+		<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile.custom.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.custom.structure.min.css">
+		<script type="text/javascript" charset="utf-8" src="js/codigo.js"></script>
         <link rel="stylesheet" type="text/css" href="css/font.css">
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
         <script type="text/javascript">
 
         function onBodyLoad()
         {       
            if(window.localStorage.getItem('id_usuario')!= null)
            {
-                alert("ID de Login = "+window.localStorage.getItem("id_usuario"));
-                loadMain();
+                
+                
            }else
            {
             loadInicio();
@@ -36,15 +37,76 @@
         }
         </script>
     </head>
-    <body onload="onBodyLoad()"> 
+<body onload="onBodyLoad()"> 
+<div data-role="page"> 
+  <div data-role="header" class="header" data-position="fixed" id="menu"> 
+    <h1 class="titulo">S A C Y G mobile</h1>
     <center>
-    <h1 class="titulo">S A C Y G <br>mobile</h1>
-    <h1 class="welcome">Vaya parece q no cuentas con conexion a internet!!!</h1>
-    <br><br><br><br><br>
-    <a href="#" onclick="onBodyLoad();" class="opciones">Intentar de nuevo</a>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
     </center>
-    </body>
+    <a href="#panel" id="abre_panel" class="panel-btn"></a> 
+  </div> 
+   
+  <div data-role="panel" id="panel" data-position-fixed="true" data-position="left" data-display="overlay"> 
+    <ul data-role="listview"> 
+      <li data-icon="false" class="item">
+      	<center>
+        <a href="#" class="panel_li item"  onclick="miPocision();">
+         <span class="icon-home"></span>
+         Inicio - Menu
+         </a>
+         </center>
+     </li>
+     <li data-icon="false" class="item">
+      	<center>
+        <a href="#" class="panel_li item"  onclick="">
+         <span class="icon-map"></span>
+         Sucursales
+         </a>
+         </center>
+     </li>
+     </li>
+       <li data-icon="false" class="item">
+      	<center>
+        <a href="#" class="panel_li item"  onclick="">
+         <span class="icon-location"></span>
+         Reservaciones
+         </a>
+         </center>
+     </li>
+     <li data-icon="false" class="item">
+      	<center>
+        <a href="#" class="panel_li item"  onclick="">
+         <span class="icon-map"></span>
+         Pedidos a domicilio
+         </a>
+         </center>
+     
+       <li data-icon="false" class="item">
+      	<center>
+        <a href="#" class="panel_li item"  onclick="loadConfiguraciones();">
+         <span class="icon-cogs"></span>
+         Mis configuraciones
+         </a>
+         </center>
+     </li>
+     
+     <li data-icon="false" class="item">
+      	<center>
+        <img src="img/sacyg.png" width="200">
+         </center>
+     </li>
+    </ul> 
+  </div> 
+
+<div data-role="content" id="contenedor"> 
+    
+</div>
+</div>
+
+
+	
+
+</body>
 </html>
 
