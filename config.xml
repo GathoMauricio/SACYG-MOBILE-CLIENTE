@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.katze.sacyg"
+    version   = "1.0.0">
+
+<name>SACYG Mobile</name>
+
+<description>
+Aplicacion para clientes de SACYG Restaurantes
+</description>
+
+<author href="http://sacygrestaurantes.com" email="mauricio@gmail.com">
+Katze Systems
+</author>
+<icon src="img/icono.png">
+</widget>

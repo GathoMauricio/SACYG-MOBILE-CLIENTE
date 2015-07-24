@@ -1,0 +1,27 @@
+/* CSS Document */
+html{
+background:url(../img/fondo.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.login{
+	width:80%;
+	height:30px;
+	text-align:center;
+	background-color:transparent;
+	border-radius:10px;
+	color:#FFF;
+}
+.welcome{
+	color:#FFF;
+	font-family: "Lobster", "Times", serif;
+	font-size: 1.8em;
+	text-shadow: #aaa 2px 2px 2px;
+}
+.opciones{
+	color:#E6E6E6;
+	font-size: 1.2em;
+	text-decoration:inherit
+}
