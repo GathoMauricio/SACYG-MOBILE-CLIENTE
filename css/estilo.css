@@ -7,6 +7,12 @@ background:url(../img/rest12.jpg) no-repeat center center fixed;
   -o-background-size: cover;
   background-size: cover;
 }
+.titulo{
+	color:#FFF;
+	font-family: "Lobster", "Times", serif;
+	font-size: 2.5em;
+	text-shadow: #aaa 2px 2px 2px;
+}
 .login{
 	width:80%;
 	height:30px;
