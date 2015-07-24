@@ -13,5 +13,5 @@ Aplicacion para clientes de SACYG Restaurantes
 <author href="http://sacygrestaurantes.com" email="mauricio@gmail.com">
 Katze Systems
 </author>
-<icon src="img/icono.png">
+<icon src="img/icono.png" />
 </widget>
