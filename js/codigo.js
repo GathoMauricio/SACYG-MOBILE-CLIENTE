@@ -1,6 +1,11 @@
 // JavaScript Document
+function cargando()
+{
+	$("#contenedor").html("<br><br><br><center><img src='img/load2.gif' width='50%'></center>");
+}
 function loadMain()
 {
+	cargando();
 	$("#contenedor").load("http://sacygrestaurantes.com/mobile/main.php");
 }
 function validarEmail(email)
@@ -60,16 +65,23 @@ function cerrarSesion()
 	window.localStorage.clear();
 	loadInicio();
 }
-function loadConfiguraciones()
+function loadConfig()
 {
-	
+	cargando();
 	$("#contenedor").html('<center><a href="#" onclick="cerrarSesion();" class="opciones">CerrarSesion</a></center>');
 }
 function loadSucursales()
 {
+	cargando();
 	$("#contenedor").load("http://sacygrestaurantes.com/mobile/sucursales.php");
 }
 function loadContacto()
 {
+	cargando();
 	$("#contenedor").load("http://sacygrestaurantes.com/mobile/contacto.php");
+}
+function loadQuienes()
+{
+	cargando();
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/quienes.php");
 }
