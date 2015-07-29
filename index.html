@@ -19,11 +19,10 @@
         {       
            if(window.localStorage.getItem('id_usuario')!= null)
            {
-                
-                
+               //loadMain(); 
            }else
            {
-            loadInicio();
+               loadInicio();
            }
         }
 
@@ -53,7 +52,7 @@
       	
         <a href="#" class="panel_li" style="color:white"  onclick="miPocision();">
          <span class="icon-home"></span>
-         Inicio - Menu
+         Inicio
          </a>
          
      </li>
@@ -91,16 +90,27 @@
          
      </li>
      
-     <li data-icon="false" class="item">
-      	<center>
-        <img src="img/sacyg.png" width="200">
-         </center>
-     </li>
     </ul> 
   </div> 
 
 <div data-role="content" id="contenedor"> 
+
+<center>
+<img src="img/sacyg.png" width="100%" height="100">
+<table style="width:100%">
+  <tr>
+   
+    <td><img src="img/iconos/sucursal.jpg" width="100%"></td>
+    <td><img src="img/iconos/reservacion.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="img/iconos/domicilio.jpg" width="100%"></td>
+    <td><img src="img/iconos/config.png" width="100%"></td>
     
+  </tr>
+</table>
+</center> 
+
 </div>
 </div>
 

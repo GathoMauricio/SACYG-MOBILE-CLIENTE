@@ -1,7 +1,7 @@
 // JavaScript Document
 function loadMain()
 {
-	$("body").load("http://sacygrestaurantes.com/mobile/main.php");
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/main.php");
 }
 function validarEmail(email)
 {
@@ -62,5 +62,6 @@ function cerrarSesion()
 }
 function loadConfiguraciones()
 {
+	
 	$("#contenedor").html('<center><a href="#" onclick="cerrarSesion();" class="opciones">CerrarSesion</a></center>');
 }
