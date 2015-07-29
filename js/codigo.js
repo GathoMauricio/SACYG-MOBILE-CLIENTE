@@ -65,3 +65,11 @@ function loadConfiguraciones()
 	
 	$("#contenedor").html('<center><a href="#" onclick="cerrarSesion();" class="opciones">CerrarSesion</a></center>');
 }
+function loadSucursales()
+{
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/sucursales.php");
+}
+function loadContacto()
+{
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/contacto.php");
+}

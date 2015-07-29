@@ -19,7 +19,7 @@
         {       
            if(window.localStorage.getItem('id_usuario')!= null)
            {
-               //loadMain(); 
+               loadMain(); 
            }else
            {
                loadInicio();
@@ -50,7 +50,7 @@
     <ul data-role="listview"> 
       <li data-icon="false" class="item">
       	
-        <a href="#" class="panel_li" style="color:white"  onclick="miPocision();">
+        <a href="#" class="panel_li" style="color:white"  onclick="loadMain();">
          <span class="icon-home"></span>
          Inicio
          </a>
@@ -58,9 +58,9 @@
      </li>
      <li data-icon="false" class="item">
       	
-        <a href="#" class="panel_li " style="color:white"   onclick="">
-         <span class="icon-map"></span>
-         Sucursales
+        <a href="#" class="panel_li " onclick="loadContacto();"  style="color:white"   onclick="">
+         <span class="icon-user"></span>
+         Contacto
          </a>
          
      </li>
@@ -68,20 +68,12 @@
        <li data-icon="false" class="item">
       	
         <a href="#" class="panel_li " style="color:white"  onclick="">
-         <span class="icon-location"></span>
-         Reservaciones
+         <span class="icon-info"></span>
+         Quienes somos
          </a>
          
      </li>
      <li data-icon="false" class="item">
-      	
-        <a href="#" class="panel_li " style="color:white"  onclick="">
-         <span class="icon-map"></span>
-         Pedidos a domicilio
-         </a>
-        
-     
-       <li data-icon="false" class="item">
       	
         <a href="#" class="panel_li " style="color:white"  onclick="loadConfiguraciones();">
          <span class="icon-cogs"></span>
@@ -109,42 +101,7 @@
 
 <div data-role="content" id="contenedor"> 
 
-<center>
-<img src="img/sacyg.png" width="100%" height="100">
-<table style="width:100%">
-  <tr>
-   
-    <td>
-    
-    <center>
-    <img src="img/iconos/map.png" width="80%">
-    <label class="lbl_menu">Sucursales</label>
-    </center>
-    </td>
-    <td>
-    <center>
-    <img src="img/iconos/pedido.png" width="80%">
-    <label class="lbl_menu">Serv. A Domicilio</label>
-    </center>
-    </td>
-  </tr>
-  <tr>
-    <td>
-    <center>
-    <img src="img/iconos/reservacion.png" width="80%">
-    <label class="lbl_menu">Reservación</label>
-    </center>
-    </td>
-    <td>
-    <center>
-    <img src="img/iconos/config.png" width="80%">
-    <label class="lbl_menu">Configuración</label>
-    </center>
-    </td>
-  </tr>
-</table>
 
-</center> 
 
 </div>
 </div>
