@@ -38,67 +38,52 @@
     </head>
 <body onload="onBodyLoad()"> 
 <div data-role="page"> 
-  <div data-role="header" class="header" data-position="fixed" id="menu"> 
-    <h1 class="titulo">S A C Y G mobile</h1>
-    <center>
-    
-    </center>
-    <a href="#panel" id="abre_panel" class="panel-btn"></a> 
-  </div> 
-   
-  <div data-role="panel" id="panel" data-position-fixed="true" data-position="left" data-display="overlay"> 
-    <ul data-role="listview"> 
-      <li data-icon="false" class="item">
-      	
-        <a href="#" class="panel_li" style="color:white"  onclick="loadMain();">
-         <span class="icon-home"></span>
-         Inicio
-         </a>
-         
-     </li>
-     <li data-icon="false" class="item">
-      	
-        <a href="#" class="panel_li " onclick="loadContacto();"  style="color:white"   onclick="">
-         <span class="icon-user"></span>
-         Contacto
-         </a>
-         
-     </li>
-     </li>
-       <li data-icon="false" class="item">
-      	
-        <a href="#" class="panel_li " onclick="loadQuienes();" style="color:white"  onclick="">
-         <span class="icon-info"></span>
-         Quienes somos
-         </a>
-         
-     </li>
-     <li data-icon="false" class="item">
-        <a href="#" class="panel_li " style="color:white">Síguenos...</a>
-     </li>
 
-      <li data-icon="false" class="item">
-        <div id="redes" >
-          <table>
-          <tr >
-          <td><img src="img/iconos/facebook.png" width="50%"></td>
-          <td><img src="img/iconos/twitter.png" width="50%"></td>
-          <td><img src="img/iconos/youtube.png" width="50%"></td>
-          </tr>
-          </table>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-      </li>
-     
+   <div data-role="header" class="header" data-position="fixed" id="menu"> 
+      <h1 class="titulo">S A C Y G mobile</h1>
+      <a href="#panel" id="abre_panel" class="panel-btn"></a> 
+   </div> 
+
+  <div data-role="panel" id="panel" data-position-fixed="true" data-position="left" data-display="overlay"> 
+      <ul data-role="listview"> 
+         <li data-icon="false" class="item">
+            <a href="#" class="panel_li" style="color:white"  onclick="loadMain();">
+             <span class="icon-home"></span>
+             Inicio
+         </li>
+         <li data-icon="false" class="item">
+             <a href="#" class="panel_li "   style="color:white" onclick="loadContacto();" >
+              <span class="icon-user"></span>
+               Contacto
+             </a>
+        </li>
+        <li data-icon="false" class="item">
+            <a href="#" class="panel_li " style="color:white" onclick="loadQuienes();"  >
+            <span class="icon-info"></span>
+            Quienes somos
+        </li>
+        <li data-icon="false" class="item">
+              <a href="#" class="panel_li " style="color:white">Síguenos...</a>
+        </li>
+        <li data-icon="false" class="item">
+             <div id="redes" >
+                <table>
+                  <tr >
+                      <td><img src="img/iconos/facebook.png" width="50%"></td>
+                      <td><img src="img/iconos/twitter.png" width="50%"></td>
+                      <td><img src="img/iconos/youtube.png" width="50%"></td>
+                  </tr>
+                </table>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              </div>
+         </li>
     </ul> 
   </div> 
 
-<div data-role="content" id="contenedor"> 
+  <div data-role="content" id="contenedor"> 
+  </div>
 
-
-
-</div>
 </div>
 
 </body>
