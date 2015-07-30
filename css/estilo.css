@@ -99,3 +99,14 @@ iframe
 	width: 100%;
 	height: 200px;
 }
+.contiene_menu
+{
+	width: 100%;
+	background-color: black;
+}
+.menu_reservacion
+{
+	width: 50%;
+	background-color: white;
+	padding: -80px;
+}
