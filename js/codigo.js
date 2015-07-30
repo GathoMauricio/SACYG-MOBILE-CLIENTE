@@ -85,3 +85,13 @@ function loadQuienes()
 	cargando();
 	$("#contenedor").load("http://sacygrestaurantes.com/mobile/quienes.php");
 }
+function loadDomicilio()
+{
+	cargando();
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/domicilio.php");
+}
+function loadReservacion()
+{
+	cargando();
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/reservacion.php");
+}
