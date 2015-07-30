@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html><head>
+<html><!-- INICIO HTML  -->
+
+<head> <!--  INICIO HEAD HTML -->
     <title>Hello PhoneGap</title>
-
+        <!-- METADATOS  -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-        <meta charset="utf-8">
+        <meta charset="utf-8"/>
+        <!--  FIN METADATOS -->
 
-		<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-		<script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile.custom.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.custom.structure.min.css">
-		<script type="text/javascript" charset="utf-8" src="js/codigo.js"></script>
+        <!--  ESTILOS CSS-->
+		    <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile.custom.structure.min.css">
         <link rel="stylesheet" type="text/css" href="css/font.css">
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster" >
+        <!--  FIN ESTILOS CSS -->
+
+        <!-- SCRIPTS JS  -->
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile.custom.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/codigo.js"></script>
+        <!--  FIN SCRIPTS JS -->
+
+        <!-- INICIO JS PHONEGAP  -->
         <script type="text/javascript">
 
         function onBodyLoad()
@@ -30,45 +40,55 @@
         {
             
         }
-        function alerta(texto)
-        {
-            
-        }
-        </script>
-    </head>
-<body onload="onBodyLoad()"> 
-<div data-role="page"> 
+        </script><!-- FIN JS PHONEGAP  -->
 
-   <div data-role="header" class="header" data-position="fixed" id="menu"> 
+</head> <!--  FIN HEAD HTML --> 
+
+<body onload="onBodyLoad();"> <!--  INICIO BODY -->
+
+
+<div data-role="page"> <!--  INICIO PAGE -->
+
+   <div data-role="header" class="header" data-position="fixed" id="menu"> <!--  INICIO HEAD -->
       <h1 class="titulo">S A C Y G mobile</h1>
       <a href="#panel" id="abre_panel" class="panel-btn"></a> 
-   </div> 
+   </div>  <!--  FIN HEAD -->
 
-  <div data-role="panel" id="panel" data-position-fixed="true" data-position="left" data-display="overlay"> 
+  <div data-role="panel" id="panel" data-position-fixed="true" data-position="left" data-display="overlay"> <!--  INICIO PANEL -->
+      
       <ul data-role="listview"> 
+      
          <li data-icon="false" class="item">
             <a href="#" class="panel_li" style="color:white"  onclick="loadMain();">
              <span class="icon-home"></span>
              Inicio
+            </a>
          </li>
+
          <li data-icon="false" class="item">
              <a href="#" class="panel_li "   style="color:white" onclick="loadContacto();" >
               <span class="icon-user"></span>
                Contacto
              </a>
         </li>
+
         <li data-icon="false" class="item">
-            <a href="#" class="panel_li " style="color:white" onclick="loadQuienes();"  >
+            <a href="#" class="panel_li " style="color:white" onclick="loadQuienes();" >
             <span class="icon-info"></span>
             Quienes somos
+            </a>
         </li>
+
         <li data-icon="false" class="item">
-              <a href="#" class="panel_li " style="color:white">Síguenos...</a>
+              <a href="#" class="panel_li " style="color:white">
+              Síguenos...
+              </a>
         </li>
+
         <li data-icon="false" class="item">
-             <div id="redes" >
+             <div id="redes" > <!--  INICIO REDES -->
                 <table>
-                  <tr >
+                  <tr>
                       <td><img src="img/iconos/facebook.png" width="50%"></td>
                       <td><img src="img/iconos/twitter.png" width="50%"></td>
                       <td><img src="img/iconos/youtube.png" width="50%"></td>
@@ -76,16 +96,18 @@
                 </table>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-              </div>
+              </div> <!-- FIN REDES  -->
          </li>
+
     </ul> 
-  </div> 
 
-  <div data-role="content" id="contenedor"> 
-  </div>
+  </div> <!--  FIN PANEL -->
 
-</div>
+  <div data-role="content" id="contenedor"> <!--  INICIO BODY -->
+  </div> <!--  FIN BODY -->
 
-</body>
-</html>
+</div><!--  FIN PAGE -->
+
+</body> <!-- FIN BODY  -->
+</html> <!--  FIN HTML -->
 
