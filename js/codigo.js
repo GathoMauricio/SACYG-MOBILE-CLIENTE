@@ -95,3 +95,8 @@ function loadReservacion()
 	cargando();
 	$("#contenedor").load("http://sacygrestaurantes.com/mobile/reservacion.php");
 }
+function loadVerReservacion()
+{
+	cargando();
+	$("#contenedor").load("http://sacygrestaurantes.com/mobile/ver_reservacion.php");
+}

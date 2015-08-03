@@ -29,7 +29,7 @@
         {       
            if(window.localStorage.getItem('id_usuario')!= null)
            {
-               //loadMain(); 
+               loadMain(); 
            }else
            {
                loadInicio();
@@ -105,41 +105,7 @@
 
   <div data-role="content" id="contenedor"> <!--  INICIO BODY -->
   
-  <div class="contiene_menu">
-    <div class="menu_reservacion">
-    <span class="icon-pacman"></span>
-    Reservar mesa
-    </div>
-    <div class="menu_reservacion">
-    <span class="icon-info"></span>
-    Ver reservaciones
-    </div>
-  </div>
-  <div id="contenedor_reservacion">
-  <center>
-    <label class="lbl_menu">Seleccione la fecha</label>
-    <input type="date" class="input"> 
-    <label class="lbl_menu">Seleccione el horario</label>
-    <input type="time" class="input">
-    <label class="lbl_menu">Seleccione sucursal </label>
-    <select class="lbl_menu">
-      <option class="lbl_menu">Sucursal 1</option>
-      <option class="lbl_menu">Sucursal 2</option>
-    </select>
-
-    <label class="lbl_menu">Necesito mesa para</label>
-    <select class="lbl_menu">
-      <option class="lbl_menu">1 Persona</option>
-      <option class="lbl_menu">2 Personas</option>
-      <option class="lbl_menu">4 Personas</option>
-      <option class="lbl_menu">8 Personas</option>
-    </select>
-     <label class="lbl_menu">Detalles(Opcional)</label>
-    <textarea class="input"></textarea>
-    <br><br>
-    <button class="input">Reservar mesa</button>
-  </center>
-  </div>
+  
 
   </div> <!--  FIN BODY -->
 
