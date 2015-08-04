@@ -100,3 +100,30 @@ function loadVerReservacion()
 	cargando();
 	$("#contenedor").load("http://sacygrestaurantes.com/mobile/ver_reservacion.php");
 }
+
+function reservarMesa()
+{
+	var fecha =$("#txt_fecha_reservacion").prop("value");
+	var hora =$("#txt_hora_reservacion").prop("value");
+	var sucursal =$("#txt_sucursal_reservacion").prop("value");
+	var personas =$("#txt_personas_reservacion").prop("value");
+	var detalles =$("#txt_detalles_reservacion").prop("value");
+	$.post("http://sacygrestaurantes.com/mobile/get_fecha.php",{},function(data){  
+		var fechaActual=data.split('-');
+		var fecha2=fecha.split('-'); 
+		if(fecha2<fechaActual){alert("La fecha ingresada es menor a la fecha actual");}
+		else{
+			$.post("http://sacygrestaurantes.com/mobile/get_hora.php",{},function(data){
+				var horaActual=data.split(':');
+				var hora2=hora.split(':');
+				if(hora2<horaActual){ alert("La hora ingresada es menor a la hora actual"); }
+				else{
+					alert("OK");
+				}
+			});
+		}
+	});
+	
+	
+
+}
