@@ -121,3 +121,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	color:white;
 	font-family: "Lobster", "Times", serif;
 }
+.caja_reservacion
+{
+	width: 89%;
+	color: white;
+	border: solid 1px white;
+	padding: 10px;
+}
