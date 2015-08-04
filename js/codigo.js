@@ -105,25 +105,36 @@ function reservarMesa()
 {
 	var fecha =$("#txt_fecha_reservacion").prop("value");
 	var hora =$("#txt_hora_reservacion").prop("value");
-	var sucursal =$("#txt_sucursal_reservacion").prop("value");
-	var personas =$("#txt_personas_reservacion").prop("value");
+	var id_sucursal =$("#txt_sucursal_reservacion").prop("value");
+	var numero_personas =$("#txt_personas_reservacion").prop("value");
 	var detalles =$("#txt_detalles_reservacion").prop("value");
-	$.post("http://sacygrestaurantes.com/mobile/get_fecha.php",{},function(data){  
+
+	$.post("http://sacygrestaurantes.com/mobile/get_fecha.php",{},
+		function(data){ 
+		
 		var fechaActual=data.split('-');
-		var fecha2=fecha.split('-'); 
+		var fecha2=fecha.split('-')+hora.split(':'); 
+		
+		//Validando fecha y hora
 		if(fecha2<fechaActual){alert("La fecha ingresada es menor a la fecha actual");}
 		else{
-			$.post("http://sacygrestaurantes.com/mobile/get_hora.php",{},function(data){
-				var horaActual=data.split(':');
-				var hora2=hora.split(':');
-				if(hora2<horaActual){ alert("La hora ingresada es menor a la hora actual"); }
-				else{
-					alert("OK");
-				}
-			});
-		}
+				var id_cliente=window.localStorage.getItem('id_usuario');
+				cargando();
+				$.post("http://sacygrestaurantes.com/mobile/insert_reservacion.php",
+				{
+					id_cliente:id_cliente,
+					id_sucursal:id_sucursal,
+					fecha:fecha,
+					hora:hora,
+					numero_personas:numero_personas,
+					detalles:detalles
+				},
+				function(data)
+				{
+					alert(data);
+								loadVerReservacion();
+				});
+			}
+	
 	});
-	
-	
-
 }
