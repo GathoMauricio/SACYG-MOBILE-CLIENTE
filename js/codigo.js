@@ -211,3 +211,19 @@ function loadMenu()
 {
 	$("#contenedor_pedido").load("http://sacygrestaurantes.com/mobile/menu.php");
 }
+function detalleAlimento(id)
+{
+	$.post("http://sacygrestaurantes.com/mobile/get_detalle.php",{id:id},function(data){ alert(data); });
+}
+function agregarAlimento(id)
+{
+	var cant = $("#txt_cant_"+id).prop("value");
+	if(confirm("¿Agregar "+cant+" pieza(s) de esta opción?"))
+	{
+
+	}
+}
+function loadPedido()
+{
+	alert("En construcción");
+}
