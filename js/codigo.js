@@ -108,7 +108,10 @@ function reservarMesa()
 	var id_sucursal =$("#txt_sucursal_reservacion").prop("value");
 	var numero_personas =$("#txt_personas_reservacion").prop("value");
 	var detalles =$("#txt_detalles_reservacion").prop("value");
-
+	if(fecha.length<=0 || hora.length<=0)
+	{
+		alert("No se estableció Fecha u Hora");
+	}else{
 	$.post("http://sacygrestaurantes.com/mobile/get_fecha.php",{},
 		function(data){ 
 		
@@ -116,7 +119,7 @@ function reservarMesa()
 		var fecha2=fecha.split('-')+hora.split(':'); 
 		
 		//Validando fecha y hora
-		if(fecha2<fechaActual){alert("La fecha ingresada es menor a la fecha actual");}
+		if(fecha2<fechaActual){alert("La fecha/hora ingresada es inválida por favor verifícala");}
 		else{
 				var id_cliente=window.localStorage.getItem('id_usuario');
 				cargando();
@@ -137,4 +140,5 @@ function reservarMesa()
 			}
 	
 	});
+}
 }
