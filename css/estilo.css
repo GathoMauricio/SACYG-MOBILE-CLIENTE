@@ -128,3 +128,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 	border: solid 1px white;
 	padding: 10px;
 }
+#contenedor_pedido
+{
+	width: 97%;
+	color: white;
+
+}

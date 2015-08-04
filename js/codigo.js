@@ -206,3 +206,8 @@ function actualizarReservacion()
 	});
 }
 }
+
+function loadMenu()
+{
+	$("#contenedor_pedido").load("http://sacygrestaurantes.com/mobile/menu.php");
+}
