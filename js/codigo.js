@@ -215,15 +215,56 @@ function detalleAlimento(id)
 {
 	$.post("http://sacygrestaurantes.com/mobile/get_detalle.php",{id:id},function(data){ alert(data); });
 }
+
+var arreglo = new Array();
+var cantidad=0;
 function agregarAlimento(id)
 {
-	var cant = $("#txt_cant_"+id).prop("value");
-	if(confirm("¿Agregar "+cant+" pieza(s) de esta opción?"))
+	cantidad = $("#txt_cant_"+id).prop("value");
+	if(confirm("¿Agregar "+cantidad+" pieza(s) de esta opción?"))
 	{
-
+		arreglo.push([cantidad,id]);
 	}
 }
+var contador=0;
 function loadPedido()
 {
-	alert("En construcción");
+	
+	$("#contenedor_pedido").html("");
+	for (var i=0 ; i < arreglo.length; i++) {
+		var producto=arreglo[i];
+		$.post("http://sacygrestaurantes.com/mobile/get_producto.php",
+		{
+			cantidad:producto[0],
+			producto:producto[1],
+			contador:i
+		},function(data){
+			$("#contenedor_pedido").append(data);
+			//$("#contenedor_pedido").append("<center><button style='background:transparent;border:solid white 1px;color:white;' onclick='eliminarElemento("+contador+");'>Remover</button></center><br>");
+		});
+		
+	contador++;	
+	};
+	if(arreglo.length>0)
+	{
+		$("#contenedor_pedido").append("<center><button class='input' id='' onclick=''><span class='icon-checkmark'></span>Confirmar pedido</button></center><br>");
+		
+	}else{
+		$("#contenedor_pedido").append("<center><h3>Aún no has agregado nada</h3></center>");
+	}
+	
+}
+function eliminarElemento(indice)
+{
+	if(confirm("¿Eliminar este producto?"))
+	{
+		if(indice<=0){
+			arreglo.splice(0,1);
+			loadPedido();
+		}else{
+			arreglo.splice(indice,indice);
+			loadPedido();
+		}
+		
+	}
 }
