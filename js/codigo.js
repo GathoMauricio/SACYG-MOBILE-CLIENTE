@@ -68,7 +68,10 @@ function cerrarSesion()
 function loadConfig()
 {
 	cargando();
-	$("#contenedor").html('<center><a href="#" onclick="cerrarSesion();" class="opciones">CerrarSesion</a></center>');
+	var id=window.localStorage.getItem('id_usuario');
+	$.post("http://sacygrestaurantes.com/mobile/configuracion.php",{id:id},function(data){
+		$("#contenedor").html(data);
+	});
 }
 function loadSucursales()
 {
@@ -379,4 +382,35 @@ navigator.geolocation.getCurrentPosition(pedirPosicion);
  		});
 
  	}
+ }
+
+ function actualizarCliente()
+ {
+ 	var nombre = $("#txt_nombre_config").prop("value");
+	var telefono = $("#txt_telefono_config").prop("value");
+	var email = $("#txt_email_config").prop("value");
+	var rfc = $("#txt_rfc_config").prop("value");
+	var calle_numero = $("#txt_calle_config").prop("value");
+	var colonia = $("#txt_colonia_config").prop("value");
+	var municipio = $("#txt_municipio_config").prop("value");
+	var cp = $("#txt_cp_config").prop("value");
+	if(nombre.length<=0 || telefono.length<=0 || email.length<=0 || calle_numero.length<=0 || colonia.length<=0 ||municipio.length<=0 || cp.length<=0)
+	{
+		alert("Los campos marcados con (*) son obligatorios ");
+	}else{
+		$.post("http://sacygrestaurantes.com/mobile/update_cliente.php",{
+			id:window.localStorage.getItem('id_usuario'),
+			nombre:nombre,
+			telefono:telefono,
+			email:email,
+			rfc:rfc,
+			calle_numero:calle_numero,
+			colonia:colonia,
+			municipio:municipio,
+			cp:cp
+		},function(data){
+			alert(data);
+			loadConfig();
+		});
+	}
  }
