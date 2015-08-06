@@ -36,8 +36,8 @@
           var pusher = new Pusher('6e90756aed549b33e941');
           var canal = pusher.subscribe('canal_gatho');
           canal.bind('mensaje',function(data){
-          //var notificacion = new Media("sonidos/notificacion.ogg",function(){},function(){});
-          //notificacion.play();
+          var notificacion = new Media("sonidos/notificacion.ogg",function(){},function(){});
+          notificacion.play();
           alert(data.mensaje);
            });
           });
