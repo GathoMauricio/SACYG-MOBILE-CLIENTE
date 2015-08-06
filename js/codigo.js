@@ -201,8 +201,11 @@ function actualizarReservacion()
 				},
 				function(data)
 				{
-					alert(data);
-					loadVerReservacion();
+					$.post("http://sacygrestaurantes.com/push/update_reservacion.php",{id:id_reservacion},function(){
+						alert(data);
+						loadVerReservacion();
+					});
+					
 				});
 			}
 	
