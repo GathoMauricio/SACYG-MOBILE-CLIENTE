@@ -273,7 +273,10 @@ function loadPedido()
 			$("#contenedor_pedido").html("<center><h3>Su solicitud se encuentra pendiente</h3></center>");
 			break;
 			case "2":
-			$("#contenedor_pedido").html("<center><p><h3>Su solicitud se encuentra en proceso</h3></p><p><h3 onclick='verRuta();'><span class='icon-map2'></span> Ver ruta del repartidor<img src='img/iconos/map.png' width='80%' onclick='verRuta();'></h3></p><a href='geo:38.897096,-77.036545'>open map</a></center>");
+			$.post("http://sacygrestaurantes.com/mobile/get_ruta.php",{id:id},function(data){
+			$("#contenedor_pedido").html("<center><p><h3>Su solicitud se encuentra en proceso</h3></p><p><a href='geo:"+data+"'><h3 onclick='verRuta();'><span class='icon-map2'></span> Ver ruta del repartidor<img src='img/iconos/map.png' width='80%' onclick='verRuta();'></h3></a></p></center>");	
+			});
+			
 			break;
 		}
 	});
