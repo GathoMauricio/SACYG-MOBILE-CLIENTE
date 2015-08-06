@@ -240,7 +240,7 @@ function loadPedido()
 	if(arreglo.length>0)
 	{
 		$("#contenedor_pedido").append("<center><label><span class='icon-location'></span>Tú ubicación</label></center>");
-		$("#contenedor_pedido").append("<center><input type='text' value='X' class='input' placeholder='Click para detectar tu ubicación' id='txt_ubicacion_pedido' onclick='detectarUbicacion();' readonly></center><br>");
+		$("#contenedor_pedido").append("<center><input type='text'  class='input' placeholder='Click para detectar tu ubicación' id='txt_ubicacion_pedido' onclick='detectarUbicacion();' readonly></center><br>");
 		$("#contenedor_pedido").append("<center><label><span class='icon-star-full'></span>Selecciona la sucursal de tu preferencia</label></center>");
 		$.post("http://sacygrestaurantes.com/mobile/get_sucursal.php",{},function(data){
 			$("#contenedor_pedido").append("<center><select id='txt_sucursal_pedido' class='input' >"+data+"</select></center><br>");
