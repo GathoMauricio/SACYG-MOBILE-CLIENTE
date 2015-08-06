@@ -264,7 +264,19 @@ function loadPedido()
 	}else{
 		$("#contenedor_pedido").append("<center><h3>Aún no has agregado nada</h3></center>");
 	}
-	//alert(total);
+	var id = window.localStorage.getItem('id_usuario');
+	$.post("http://sacygrestaurantes.com/mobile/get_estatus_pedido.php",{id:id},function(data){
+		console.log("Estatus "+data);
+		switch(data)
+		{
+			case "1":
+			$("#contenedor_pedido").html("<center><h3>Su solicitud se encuentra pendiente</h3></center>");
+			break;
+			case "2":
+			$("#contenedor_pedido").html("<center><p><h3>Su solicitud se encuentra en proceso</h3></p><p><h3 onclick='verRuta();'><span class='icon-map2'></span> Ver ruta del repartidor<img src='img/iconos/map.png' width='80%' onclick='verRuta();'></h3></p></center>");
+			break;
+		}
+	});
 }
 function eliminarElemento(indice,precio)
 {
