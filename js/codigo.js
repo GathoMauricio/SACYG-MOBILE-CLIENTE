@@ -236,7 +236,7 @@ function loadPedido()
 	
 	$("#contenedor_pedido").html("");
 
-	detectarUbicacion();
+	
 	if(arreglo.length>0)
 	{
 		$("#contenedor_pedido").append("<center><label><span class='icon-location'></span>Tú ubicación</label></center>");
@@ -255,7 +255,7 @@ function loadPedido()
 			contador:i
 		},function(data){
 			$("#contenedor_pedido").append(data);
-			
+			detectarUbicacion();
 		});
 		};
 		});
