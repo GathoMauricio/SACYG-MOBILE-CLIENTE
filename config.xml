@@ -13,5 +13,8 @@ Aplicacion para clientes de SACYG Restaurantes
 <author href="http://sacygrestaurantes.com" email="mauricio@gmail.com">
 Katze Systems
 </author>
+<!--Acceso a URLs externas-->
+<access origin="*" />
+<gap:plugin name="org.apache.cordova.geolocation" version="0.3.6" />
 <icon src="img/icono.png" />
 </widget>
