@@ -236,7 +236,7 @@ function loadPedido()
 	
 	$("#contenedor_pedido").html("");
 
-	
+	detectarUbicacion();
 	if(arreglo.length>0)
 	{
 		$("#contenedor_pedido").append("<center><label><span class='icon-location'></span>Tú ubicación</label></center>");
@@ -289,9 +289,10 @@ function detectarUbicacion()
 	geolocalizame();
 	if(latitud.length<=0 || longitud.length<=0)
 	{
-
+		alert("A ocurrido un error al detectar su ubicación!!!");
 	}else{
 		$("#txt_ubicacion_pedido").prop("value","Tu ubicacion ha sido encontrada!!!");
+		$("#txt_ubicacion_pedido").css("color","#00BFFF");
 	}
 	
 }
