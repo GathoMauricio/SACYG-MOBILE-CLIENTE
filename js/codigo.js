@@ -286,5 +286,22 @@ var latitud="";
 var longitud="";
 function detectarUbicacion()
 {
-	$("#txt_ubicacion_pedido").prop("value","Tu ubicacion ha sido encontrada!!!");
+	geolocalizame();
+	if(latitud.length<=0 || longitud.length<=0)
+	{
+
+	}else{
+		$("#txt_ubicacion_pedido").prop("value","Tu ubicacion ha sido encontrada!!!");
+	}
+	
 }
+function pedirPosicion(pos) {
+   var centro = new google.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
+   
+  latutud=pos.coords.latitude;
+  longitud=pos.coords.longitude;
+}
+ 
+function geolocalizame(){
+navigator.geolocation.getCurrentPosition(pedirPosicion);
+ }
