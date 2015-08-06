@@ -296,9 +296,7 @@ function detectarUbicacion()
 	
 }
 function pedirPosicion(pos) {
-   var centro = new google.maps.LatLng(pos.coords.latitude,pos.coords.longitude);
-   
-  latutud=pos.coords.latitude;
+  latitud=pos.coords.latitude;
   longitud=pos.coords.longitude;
 }
  
