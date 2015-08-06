@@ -140,8 +140,12 @@ function reservarMesa()
 				},
 				function(data)
 				{
-					alert(data);
-					loadVerReservacion();
+					$.post("http://sacygrestaurantes.com/push/insert_reservacion.php",
+						{
+						},function(){
+						alert(data);
+						loadVerReservacion();
+					});
 				});
 			}
 			}
@@ -156,8 +160,13 @@ function eliminarReservacion(id)
 	{
 		cargando();
 		$.post("http://sacygrestaurantes.com/mobile/delete_reservacion.php",{id:id},function(data){
-			alert(data);
-			loadVerReservacion();
+			$.post("http://sacygrestaurantes.com/push/delete_reservacion.php",
+						{
+						id:id
+						},function(){
+						alert(data);
+						loadVerReservacion();
+					});
 		});
 	}
 }
