@@ -17,6 +17,7 @@
         <!--  FIN ESTILOS CSS -->
 
         <!-- SCRIPTS JS  -->
+
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
         <script type="text/javascript" charset="utf-8" src="jquery/jquery.mobile.custom.min.js"></script>
@@ -30,7 +31,13 @@
         <script type="text/javascript" charset="utf-8" src="jquery/jquery-ui.min.js"></script>
         <!-- INICIO JS PHONEGAP  -->
         <script type="text/javascript">
-
+          $(function(){
+          var pusher = new Pusher('6e90756aed549b33e941');
+          var canal = pusher.subscribe('canal_gatho');
+          canal.bind('mensaje',function(data){
+          alert(data.mensaje);
+           });
+          });
         function onBodyLoad()
         {       
            if(window.localStorage.getItem('id_usuario')!= null)
