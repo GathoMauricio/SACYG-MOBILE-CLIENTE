@@ -236,7 +236,17 @@ function loadPedido()
 	
 	$("#contenedor_pedido").html("");
 
-	for (var i=0 ; i < arreglo.length; i++) {
+	
+	if(arreglo.length>0)
+	{
+		$("#contenedor_pedido").append("<center><label><span class='icon-location'></span>Tú ubicación</label></center>");
+		$("#contenedor_pedido").append("<center><input type='text' class='input' placeholder='Click para detectar tu ubicación' id='txt_ubicacion_pedido' onclick='detectarUbicacion();' readonly></center><br>");
+		$("#contenedor_pedido").append("<center><label><span class='icon-star-full'></span>Selecciona la sucursal de tu preferencia</label></center>");
+		$.post("http://sacygrestaurantes.com/mobile/get_sucursal.php",{},function(data){
+			$("#contenedor_pedido").append("<center><select type='text' class='input' >"+data+"</select></center><br>");
+			$("#contenedor_pedido").append("<center><button class='input' id='' onclick=''><span class='icon-checkmark'></span>Confirmar pedido $"+total+"</button></center><br>");
+		for (var i=0 ; i < arreglo.length; i++) {
+			
 		var producto=arreglo[i];
 		$.post("http://sacygrestaurantes.com/mobile/get_producto.php",
 		{
@@ -247,10 +257,10 @@ function loadPedido()
 			$("#contenedor_pedido").append(data);
 			
 		});
-	};
-	if(arreglo.length>0)
-	{
-		$("#contenedor_pedido").append("<center><button class='input' id='' onclick=''><span class='icon-checkmark'></span>Confirmar pedido $"+total+"</button></center><br>");
+		};
+		});
+		
+		
 		
 	}else{
 		$("#contenedor_pedido").append("<center><h3>Aún no has agregado nada</h3></center>");
@@ -271,4 +281,10 @@ function eliminarElemento(indice,precio)
 		}
 		
 	}
+}
+var latitud="";
+var longitud="";
+function detectarUbicacion()
+{
+	$("#txt_ubicacion_pedido").prop("value","Tu ubicacion ha sido encontrada!!!");
 }
