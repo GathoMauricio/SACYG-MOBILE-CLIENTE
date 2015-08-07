@@ -392,7 +392,7 @@ navigator.geolocation.getCurrentPosition(pedirPosicion);
 	 				vaciarLista();
 	 			};
 	 			alert("Pedido generado\nEstaremos con Ud lo antes posible\nEl repartidor no lleva mas de $50 en cambio.");
-
+	 			$.post("http://sacygrestaurantes.com/push/insert_pedido.php",{},function(data){});
  			});
  		});
 
